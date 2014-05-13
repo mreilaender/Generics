@@ -1,5 +1,11 @@
 package stack1;
 
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.lang.management.ThreadInfo;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 public class StackTest {
 //	private final static String let = writeLetters(130);
@@ -48,14 +54,18 @@ public class StackTest {
 				"Removing the Objective on the Top ... \n" + popSs() +
 				"Objective on the Top is now: " + ss.peek() + "\n"
 		);
-//		// Show Updated Objectives //
-//		System.out.println(
-//				"All Objectives: \n" +
-//				" " + writeLetters(let2) + "\n" +
-//				let2 +  "\n" +
-//				" " + writeLetters(let2) + " \n" +
-//				"\t" + writeLetters(130) + "\n"
-//				);
+		// Show Updated Objectives //
+		let2 = "| " + ss.list() + " |";
+		ss.push("test");
+		let2 = "| " + ss.list() + " |";
+		System.out.println(
+				"All Objectives: \n" +
+				" " + writeLetters(let2) + "\n" +
+				let2 +  "\n" +
+				" " + writeLetters(let2) + " \n" +
+				"\t" + writeLetters(130) + "\n"
+				);
+		System.out.println("\n\n\n");
 	}
 	/**
 	 * Executes the Method pop in ss but doesn't display anything

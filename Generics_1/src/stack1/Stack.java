@@ -16,12 +16,12 @@ public class Stack<T>
 	public void push(T type)
 	{
 //		System.out.println(""+type.toString());
-		this.list.add(type);
+		this.list.addLast(type);
 	}
 	public T pop()
 	{
-		temp = this.list.getFirst();
-		this.list.removeFirst();
+		temp = this.list.getLast();
+		this.list.removeLast();
 		return temp;
 		
 	}
